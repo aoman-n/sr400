@@ -23,6 +23,7 @@ class BoardsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new(board_id: @board.id)
   end
 
   def edit
@@ -47,5 +48,4 @@ class BoardsController < ApplicationController
   def set_target_board
     @board = Board.find(params[:id])
   end
-
 end
